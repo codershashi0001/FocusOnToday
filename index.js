@@ -48,7 +48,7 @@ tt.forEach((inu) => {
     inu.value = allgoal[inu.id].name;
 }
 
-if (allgoal[inu.id].completed){
+if (allgoal[inu.id] && allgoal[inu.id].completed){
     inu.parentElement.classList.add ("completed")
 }
     
