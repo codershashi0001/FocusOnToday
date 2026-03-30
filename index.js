@@ -18,7 +18,7 @@ check.forEach((e) => {
 
    e.addEventListener("click",(f) =>{
     //  for (let i=0; i<tt.length; i++){
-   const allfield = [...tt].every((input) => { return input.value})
+   const allfield = [...tt].every((input) => input.value.trim()) 
    if (allfield){
        e.parentElement.classList.toggle ('completed')
        error.style.display = "none"
