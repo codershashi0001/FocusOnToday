@@ -23,7 +23,9 @@ check.forEach((e) => {
        e.parentElement.classList.toggle ('completed')
        error.style.display = "none"
        const inpu = e.nextElementSibling.id
-       allgoal[inpu].completed = !allgoal[inpu].completed
+      if (allgoal[inpu]) {
+    allgoal[inpu].completed = !allgoal[inpu].completed
+}
        completed = Object.values(allgoal).filter((goal) => goal.completed).length;
        const total = tt.length;
        const progress = (completed / total) * 100;
